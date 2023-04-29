@@ -9,6 +9,8 @@
 <body>
     <h1>Add a Todo Item:</h1>
     <form method="POST" action="add">
+        <!-- security tag for django to know form request is coming from this site -->
+        {% csrf_token %}
         <div>
             <p>
                 <label for="id_name">Name</label>
@@ -27,6 +29,5 @@
             </p>
         </div>
     </form>
-
 </body>
 </html>
